@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.mashup.damgledamgle">
 
+    <!-- 인터넷 접속을 위한 퍼미션 -->
     <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Always include this permission -->
+    <!-- 네트워크를 이용하여 단말기 위치 식별 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- Include only if your app benefits from precise location access. -->
+    <!-- GPS와 네트워크를 이용하여 단말기 위치 식별 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!-- Background에서 디바이스 위치정보를 얻기 위한 퍼미션 -->
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
 
     <application
         android:name=".DamgleDamgleApplication"
@@ -15,8 +28,9 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.DamgleDamgle">
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.DamgleDamgle"
+            tools:ignore="LockedOrientationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

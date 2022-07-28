@@ -46,8 +46,7 @@ fun SplashScreen(navController: NavHostController) {
         if (viewModel.isUserRegistered.value == true) {
             navController.navigate("home_screen")
         } else {
-            // TODO(minji): move to onboarding page
-            navController.navigate("home_screen") // 임시
+            navController.navigate("onboarding_screen")
         }
     }
 
