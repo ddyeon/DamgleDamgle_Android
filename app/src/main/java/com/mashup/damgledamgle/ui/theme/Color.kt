@@ -25,3 +25,6 @@ val Gray700 = Color(0xFF616161)
 val Gray600 = Color(0xFF9E9E9E)
 val Gray400 = Color(0xFFE0E0E0)
 val White = Color(0xFFFFFFFF)
+
+val DamgleBlack = Color(0xFF212121)
+val DamgleLightGreen = Color(0xFFDBFD56)

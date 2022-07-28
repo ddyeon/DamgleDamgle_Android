@@ -29,9 +29,9 @@ class HomeViewModel : ViewModel()  {
     fun getMakerList() : ArrayList<MakerInfo> {
         val list : ArrayList<MakerInfo> = arrayListOf()
 
-        list.add(MakerInfo(R.drawable.ic_heart_small,false, 37.5455113, 127.0657011))
-        list.add(MakerInfo(R.drawable.ic_angry_small,true, 37.5448118, 127.0649041))
-        list.add(MakerInfo(R.drawable.ic_amazing_small,false, 37.54529, 127.06630))
+        list.add(MakerInfo(R.drawable.ic_heart_small,false, true,37.5455113, 127.0657011,0))
+        list.add(MakerInfo(R.drawable.ic_angry_small,true, false,37.5448118, 127.0649041,0))
+        list.add(MakerInfo(R.drawable.ic_amazing_small,false, false,37.54529, 127.06630,56))
 
         return list
     }
@@ -40,6 +40,8 @@ class HomeViewModel : ViewModel()  {
 data class MakerInfo(
     val resId: Int,
     val isRead: Boolean,
+    val isMine :Boolean,
     val latitude: Double,
-    val longitude: Double
+    val longitude: Double,
+    val size : Int
 )
